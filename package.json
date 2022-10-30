@@ -1,0 +1,15 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassRooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+  },
+  "keywords": [
+    "Projet3",
+    "OpenClassRooms"
+  ],
+  "author": "Johann Vottero",
+  "license": "ISC"
+}
