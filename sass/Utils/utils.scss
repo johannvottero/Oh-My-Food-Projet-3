@@ -1,0 +1,19 @@
+$mint:#99e2d0;
+$grey:#f7f7f7;
+$purpleGradient:linear-gradient(170deg,#ff79da, #9356dc);
+
+@mixin box-shadow {
+    box-shadow: 4px 4px 2px #f7f7f7;
+}
+
+@mixin box_dish 
+{
+    width: 100%;
+}
+
+@mixin underline
+{
+    text-decoration: underline;
+    width: 40px;
+    color: $mint;
+}

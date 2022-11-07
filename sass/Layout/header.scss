@@ -1,0 +1,23 @@
+header
+{   
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    position:relative;
+}
+
+#logo
+{
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    margin-bottom: 15px;
+}
+
+.header_arrow
+{
+    font-size: 1.7rem;
+    color: black;
+    position: absolute;
+    left: 25px;
+}

@@ -11,5 +11,8 @@
     "OpenClassRooms"
   ],
   "author": "Johann Vottero",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
 }

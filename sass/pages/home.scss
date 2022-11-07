@@ -1,0 +1,134 @@
+.location 
+{
+    box-shadow: 0px -5px 5px lightgrey;
+    display: flex;
+    justify-content: center;
+    background-color:#eaeaea ;
+}
+
+.presentation
+{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    align-items: center;
+    background-color: #f7f7f7;
+        p
+        {
+            font-size: 1.1rem;
+        }
+}
+
+.functioning
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+        .functioning__icon {
+            color: grey;
+            margin:0 35px 0 20px;
+            font-size: medium;
+        }
+        :nth-child(4)
+            {
+                background-color: #f5edff;
+            };
+            
+}
+
+
+.funct_btn
+{
+    display: flex;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    height: 70px;
+    text-align: center;
+    margin: 10px;
+    box-shadow: 4px 4px 2px lightgrey;
+        .funct_number
+        {
+            height: 25px;
+            width: 25px;
+            background-color: #9356dc;
+            border-radius: 50%;
+            color: white;
+            padding: 5px 5px;
+            position: relative;
+            right: 10px;
+        }
+}
+
+
+
+.restaurants
+{
+    background-color: #f7f7f7;
+    padding: 35px 50px;
+    
+}
+
+.restaurants__card
+{
+    width: 100%;
+    height: 280px;
+    box-shadow: 5px 5px 5px lightgrey;
+    border-radius: 25px 25px 25px 25px;
+    background-color: white;
+    margin-bottom: 20px;
+    position: relative;
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 200px;
+            border-radius: 25px 25px 0 0;
+        }
+            .badge
+            {
+                position: absolute;
+                right: 20px;
+                top: 15px;
+                font-weight: bolder;
+                background-color:#99e2d0;
+                width: 100px;
+                text-align: center;
+                height: 45px;
+                color:#1a8a68;
+            }
+
+            .restaurants__card__caption 
+            {
+                display: flex;
+            }
+            .restaurants__card__caption__icon 
+            {
+                flex: 1;
+                font-size: 1.7rem;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .restaurants__card__caption__description
+            {
+                flex:5;
+                margin: 10px 0 0 15px;
+                    h3
+                    {
+                        font-size: 1.2rem;
+                        margin: 0;
+                        
+                    }
+                    img 
+                    {
+                        width: 100%;
+                        object-fit: cover;
+                        height: 200px;
+                        border-radius: 25px 25px 0 0;
+                    }
+                    p
+                    {
+                       margin: 0 0 0 0px; 
+                    }
+            }
+}
