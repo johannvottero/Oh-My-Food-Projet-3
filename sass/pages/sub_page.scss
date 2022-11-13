@@ -1,0 +1,78 @@
+.menu__section__dish
+{
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 4px 4px 2px #e6dddd;
+    padding-left: 15px;
+    margin: 20px 0 15px 0;
+        h3
+            {
+                margin:0;
+                padding-top: 10px;
+                font-size: 1.2rem;
+            }
+
+    .menu__section__dish__description {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 0 10px 0;
+
+        
+        .menu__section__dish__description__recipe
+        {
+            flex: 8;
+        }
+            p
+            {
+                margin: 0;
+                font-size: 1rem;
+            }
+            
+        .menu__section__dish__description__price
+        {
+            flex: 1;
+            font-weight:bolder
+        }
+            p
+            {
+                margin: 0;
+            }
+}
+}
+
+.menu 
+{
+    background-color: $grey;
+}
+
+.restaurant__name 
+{
+    font-family: Shrikhand, sans-serif, Arial;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $grey;
+    padding-bottom: 15px;
+
+        .restaurant__name__icon
+        {
+            font-size: 1.7rem;
+        }
+        h1
+        {
+            margin: 0;
+        }
+}
+
+.menu__section__title {
+    h2 {
+    font-weight: lighter;
+    font-family: roboto;
+    text-transform: uppercase;
+    border-bottom: 3px solid $mint;
+    width: 40px;
+    padding-bottom: 5px;
+}
+}

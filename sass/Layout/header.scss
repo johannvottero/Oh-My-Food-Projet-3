@@ -1,9 +1,9 @@
-header
+.sub__header
 {   
-    padding-top: 15px;
     display: flex;
     justify-content: center;
     position:relative;
+
 }
 
 #logo
@@ -11,7 +11,7 @@ header
     display: flex;
     justify-content: center;
     height: 35px;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
 .header_arrow
@@ -20,4 +20,16 @@ header
     color: black;
     position: absolute;
     left: 25px;
+    top: 20px;
+
+}
+
+.sub__header__img {
+    height: 250px;
+    width: 100%;
+        img
+        {
+            width: 100%;
+            object-fit: cover;
+        }
 }

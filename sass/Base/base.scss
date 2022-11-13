@@ -4,14 +4,29 @@
     box-sizing: border-box; 
   }
 
-  .main_wrapper
+.main_wrapper
 {
-  max-width: 480px;
   margin: auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 body
 {
-  font-family: roboto;
+  font-family: roboto, sans-serif, Arial;
+}
+
+.main_container
+{
+    background-color: $grey;
+    border-radius:25px 25px 0 0;
+    position: relative;
+    margin: auto;
+    padding: 30px;
+}
+
+a
+{
+  color: inherit; 
+  text-decoration: inherit; 
 }

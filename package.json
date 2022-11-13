@@ -4,7 +4,7 @@
   "description": "Projet 3 OpenClassRooms",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./css/style.css"
+    "sass": "sass --watch sass/style.scss:css/style.css"
   },
   "keywords": [
     "Projet3",
@@ -13,6 +13,6 @@
   "author": "Johann Vottero",
   "license": "ISC",
   "dependencies": {
-    "sass": "^1.55.0"
+    "sass": "^1.56.1"
   }
 }
