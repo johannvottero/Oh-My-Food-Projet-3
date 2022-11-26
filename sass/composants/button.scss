@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: center;
-    padding: 35px;
+    padding-bottom: 35px;
 }
 
 .btn-pill
@@ -21,6 +21,33 @@
             margin: auto;
             text-align: center;
             font-weight: bold;
-            
         }
+}
+
+@media all and (min-width: 768px) {
+
+.btn-pill
+{
+    height: 90px;
+    width: 80%;
+    margin: 15px;
+    p
+    {
+        font-size: 2rem;
+    }
+}
+}
+
+@media screen and (min-width: 992px)
+{
+    .btn-pill
+{
+    height: 70px;
+    width: 20%;
+    margin: 15px;
+    p
+    {
+        font-size: 1.5rem;
+    }
+}
 }

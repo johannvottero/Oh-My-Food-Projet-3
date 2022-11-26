@@ -1,53 +1,130 @@
-.menu__section__dish
-{
+@keyframes appear {
+    0% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes loader {}
+
+.fa-circle-check {
+    color: white;
+    overflow: hidden;
+}
+
+
+.menu__section__card:hover>.menu__section__card__check {
+    width: 15%;
+    color: white;
+    transform: all 600ms;
+
+    &>.fa-circle-check {
+        animation-delay: 100ms;
+        transform: rotate(360deg);
+        transition: 0.4s ease-in-out;
+    }
+}
+
+
+.menu__section__card__check {
+    display: flex;
+    font-size: 1.7rem;
+    width: 0%;
+    border-radius: 0 15px 15px 0;
+    background-color: $mint;
+    justify-content: center;
+    align-items: center;
+    transition: all 400ms;
+}
+
+
+.menu__section__card {
     border-radius: 15px;
     background-color: white;
     box-shadow: 4px 4px 2px #e6dddd;
     padding-left: 15px;
     margin: 20px 0 15px 0;
-        h3
-            {
-                margin:0;
-                padding-top: 10px;
-                font-size: 1.2rem;
-            }
+    display: flex;
+    animation-name: appear;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
 
-    .menu__section__dish__description {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding: 10px 0 10px 0;
+    h3 {
+        margin: 0;
+        padding-top: 10px;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
 
+.menu__section__card__dish {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menu__section__card__dish__description {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    p {
+        margin: 0;
+        font-size: 1rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .menu__section__card__dish__description__recipe {
+        flex: 8;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         
-        .menu__section__dish__description__recipe
-        {
-            flex: 8;
-        }
-            p
-            {
-                margin: 0;
-                font-size: 1rem;
-            }
-            
-        .menu__section__dish__description__price
-        {
-            flex: 1;
-            font-weight:bolder
-        }
-            p
-            {
-                margin: 0;
-            }
-}
+    }
+
+    .menu__section__card__dish__description__price {
+        flex: 1;
+        font-weight: bolder;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .menu__section__card__dish__description__price p {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
 }
 
-.menu 
-{
+
+.fa-heart:hover {
+    font-weight: 900;
+    background: linear-gradient(to right, #ff79da 0%, #9356dc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.menu {
     background-color: $grey;
 }
 
-.restaurant__name 
-{
+.restaurant__name {
     font-family: Shrikhand, sans-serif, Arial;
     display: flex;
     align-items: center;
@@ -56,23 +133,164 @@
     background-color: $grey;
     padding-bottom: 15px;
 
-        .restaurant__name__icon
-        {
-            font-size: 1.7rem;
-        }
-        h1
-        {
-            margin: 0;
-        }
+
+    .restaurant__name__icon {
+        font-size: 1.7rem;
+    }
+
+    h1 {
+        margin: 0;
+    }
 }
 
-.menu__section__title {
+.menu__section__card__title {
     h2 {
-    font-weight: lighter;
-    font-family: roboto;
-    text-transform: uppercase;
-    border-bottom: 3px solid $mint;
-    width: 40px;
-    padding-bottom: 5px;
+        font-weight: lighter;
+        font-family: roboto, sans-serif, Arial;
+        text-transform: uppercase;
+        border-bottom: 3px solid $mint;
+        width: 40px;
+        padding-bottom: 5px;
+    }
+
 }
+
+@media all and (min-width: 768px) {
+
+    .restaurant__name h1 {
+        font-size: 3rem;
+        padding: 30px;
+    }
+
+    .fa-regular {
+        font-size: 2rem;
+    }
+
+
+    .menu__section__card {
+        height: 200px;
+
+        .menu__section__card__dish_title {
+            display: flex;
+            justify-content: center;
+        }
+
+        h3 {
+            font-size: 2rem;
+            justify-content: center;
+            padding-top: 15px;
+        }
+
+        p {
+            font-size: 1.7rem;
+            padding: 15px;
+        }
+
+        .menu__section__card__dish__description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title h2 {
+            text-transform: uppercase;
+            border-bottom: 3px solid #99e2d0;
+            padding-bottom: 5px;
+            margin: auto;
+            width: 100%;
+            font-size: 2rem;
+        }
+    }
+    .restaurants__card 
+    {
+        width: 110%;
+        img
+            {
+                width: 100%;
+                object-fit: cover;
+                
+            }
+    }
+    
 }
+    @media screen and (min-width: 992px) {
+
+        .restaurant__name {
+            justify-content: center;
+        h1 
+        { 
+            font-size: 2rem;
+            
+        }
+    }
+
+        .menu__section__card__title
+        {
+            padding: 15px;
+            h2
+            {
+                font-size: 1.2rem;
+            }
+        }
+        
+        .menu__section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        
+        .menu__section__starter
+        {
+            flex-direction: column;
+            width: 30%;
+        }
+        
+        .menu__section__main
+        {
+            width: 30%;
+        }
+        .menu__section__dessert
+        {
+            width: 30%;
+        }
+
+        .menu__section__card__dish
+        {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .menu__section__card
+        {
+            height: 100px;
+            .menu__section__card__dish_title
+            {
+                justify-content: flex-start;
+            }
+            .menu__section__card__dish__description
+            {
+                display: block;   
+            }
+            &.__description__recipe
+            {
+            text-overflow: ellipsis;
+            }
+            
+            h3
+            {
+                font-size: 1rem;
+            }
+            p
+            {
+                font-size: 1rem;
+                padding: 0;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+
+
+    }
+

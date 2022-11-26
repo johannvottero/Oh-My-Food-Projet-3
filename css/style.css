@@ -14,10 +14,15 @@ body {
   font-family: roboto, sans-serif, Arial;
 }
 
+main {
+  background-color: #f7f7f7;
+}
+
 .main_container {
   background-color: #f7f7f7;
   border-radius: 25px 25px 0 0;
   position: relative;
+  top: -40px;
   margin: auto;
   padding: 30px;
 }
@@ -25,6 +30,85 @@ body {
 a {
   color: inherit;
   text-decoration: inherit;
+}
+
+@media all and (min-width: 768px) {
+  .main_wrapper {
+    padding: 0 50px;
+  }
+}
+@media all and (min-width: 992px) {
+  .main_wrapper {
+    margin: auto;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    transform: rotate(180deg);
+    opacity: 0.7;
+    visibility: visible;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes background {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loader__container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  animation: background 3s forwards;
+  z-index: 1000;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loader__animation {
+  border: 10px solid white;
+  border-top: 10px solid #99e2d0;
+  border-left: 10px solid #99e2d0;
+  border-bottom: 10px solid #99e2d0;
+  border-right: 10px solid #99e2d0;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  animation: spin 3s forwards;
+  margin: auto;
+  cursor: wait;
+  background-image: url("/images/logo/ohmyfood.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .sub__header {
@@ -48,15 +132,37 @@ a {
   top: 20px;
 }
 
-.sub__header__img {
-  height: 250px;
-  width: 100%;
-}
 .sub__header__img img {
   width: 100%;
   object-fit: cover;
+  height: 250px;
 }
 
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #logo {
+    height: 60px;
+    margin: 20px;
+  }
+  .sub__header__img img {
+    width: 100%;
+    object-fit: cover;
+    height: 350px;
+  }
+  .header_arrow {
+    font-size: 3rem;
+    left: 25px;
+    top: 25px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #logo {
+    height: 50px;
+    margin: 20px;
+  }
+  .header_arrow {
+    font-size: 1.3rem;
+  }
+}
 footer {
   background-color: #353535;
   position: sticky;
@@ -76,13 +182,51 @@ footer h2 {
   color: white;
   padding-top: 35px;
   margin-top: 0;
+  font-weight: 500;
+}
+footer .fa-utensils {
+  padding-right: 20px;
+}
+footer .fa-handshake-angle {
+  padding-right: 12px;
 }
 
+@media all and (min-width: 768px) {
+  footer {
+    font-size: 1.5rem;
+  }
+  li {
+    line-height: 4rem;
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 992px) {
+  footer {
+    font-size: 1.1rem;
+    padding-left: 50px;
+  }
+  ul {
+    padding-left: 50px;
+  }
+  li {
+    line-height: 2rem;
+    font-size: 1.1rem;
+  }
+  .fa-utensils {
+    font-size: 1.5rem;
+    padding-right: 20px;
+  }
+  .fa-handshake-angle {
+    font-size: 1.5rem;
+    padding-right: 10px;
+  }
+}
 .location {
   box-shadow: 0px -5px 5px lightgrey;
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
+  font-weight: 700;
 }
 
 .presentation {
@@ -107,8 +251,11 @@ footer h2 {
   margin: 0 35px 0 20px;
   font-size: medium;
 }
-.functioning :nth-child(4) {
+.functioning .pink {
   background-color: #f5edff;
+}
+.functioning .fa-store {
+  color: #8c57c9;
 }
 
 .funct_btn {
@@ -116,9 +263,9 @@ footer h2 {
   align-items: center;
   background-color: #f7f7f7;
   border-radius: 20px;
-  height: 70px;
+  height: 80px;
   text-align: center;
-  margin: 10px;
+  margin-bottom: 25px;
   box-shadow: 4px 4px 2px lightgrey;
 }
 .funct_btn .funct_number {
@@ -134,7 +281,7 @@ footer h2 {
 
 .restaurants {
   background-color: #f7f7f7;
-  padding: 35px 50px;
+  padding: 35px;
 }
 
 .restaurants__card {
@@ -188,40 +335,260 @@ footer h2 {
 }
 .restaurants__card .restaurants__card__caption__description p {
   margin: 0 0 0 0px;
-  padding: 5px;
+  padding-top: 5px;
 }
 
-.menu__section__dish {
+@media all and (min-width: 768px) {
+  .location p {
+    font-size: 1.7rem;
+  }
+  .presentation p {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .presentation h1 {
+    font-size: 3rem;
+  }
+  .functioning__title {
+    margin: auto;
+    font-size: 1.5rem;
+  }
+  .functioning__btn__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .functioning__btn__container h3 {
+    font-size: 1.5rem;
+  }
+  .funct_btn {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    width: 30%;
+  }
+  .funct_btn .funct_number {
+    height: 35px;
+    width: 35px;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    top: -10px;
+  }
+  .funct_btn .fa-sharp {
+    font-size: 2.5rem;
+  }
+  .funct_btn .fa-solid {
+    font-size: 2.5rem;
+  }
+  .restaurant__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px;
+    margin-top: 30px 45px;
+  }
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .restaurants h2 {
+    font-size: 2.5rem;
+    margin: auto;
+  }
+  .restaurants__card {
+    width: 100%;
+  }
+  .restaurants__card img {
+    width: 350px;
+  }
+  .restaurants__card__caption {
+    font-size: 1.5rem;
+  }
+  .restaurants__card h3 {
+    font-size: 3rem;
+  }
+  .restaurants__card .restaurants__card__caption__description h3 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card {
+    width: 40%;
+  }
+  .location p {
+    font-size: 1.7rem;
+  }
+  .presentation p {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .presentation h1 {
+    font-size: 2.5rem;
+  }
+  .functioning__title {
+    margin: auto;
+    font-size: 1.5rem;
+  }
+  .functioning__btn__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .functioning__btn__container h3 {
+    font-size: 1.5rem;
+  }
+  .funct_btn {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+    width: 30%;
+  }
+  .funct_btn .funct_number {
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+    top: -10px;
+  }
+  .restaurant__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 35px 35px;
+    padding-top: 50px;
+    margin: auto;
+  }
+  .restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .restaurants h2 {
+    font-size: 2.5rem;
+    margin: auto;
+  }
+  .restaurants__card img {
+    width: 400px;
+  }
+  .restaurants__card__caption {
+    font-size: 1.5rem;
+  }
+  .restaurants__card h3 {
+    font-size: 3rem;
+  }
+  .restaurants__card .restaurants__card__caption__description h3 {
+    font-size: 1.7rem;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes loader {}
+.fa-circle-check {
+  color: white;
+  overflow: hidden;
+}
+
+.menu__section__card:hover > .menu__section__card__check {
+  width: 15%;
+  color: white;
+  transform: all 600ms;
+}
+.menu__section__card:hover > .menu__section__card__check > .fa-circle-check {
+  animation-delay: 100ms;
+  transform: rotate(360deg);
+  transition: 0.4s ease-in-out;
+}
+
+.menu__section__card__check {
+  display: flex;
+  font-size: 1.7rem;
+  width: 0%;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  justify-content: center;
+  align-items: center;
+  transition: all 400ms;
+}
+
+.menu__section__card {
   border-radius: 15px;
   background-color: white;
   box-shadow: 4px 4px 2px #e6dddd;
   padding-left: 15px;
   margin: 20px 0 15px 0;
+  display: flex;
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
 }
-.menu__section__dish h3 {
+.menu__section__card h3 {
   margin: 0;
   padding-top: 10px;
   font-size: 1.2rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu__section__dish .menu__section__dish__description {
+
+.menu__section__card__dish {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.menu__section__card__dish__description {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px 0 10px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu__section__dish .menu__section__dish__description .menu__section__dish__description__recipe {
-  flex: 8;
-}
-.menu__section__dish .menu__section__dish__description p {
+.menu__section__card__dish__description p {
   margin: 0;
   font-size: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu__section__dish .menu__section__dish__description .menu__section__dish__description__price {
+.menu__section__card__dish__description .menu__section__card__dish__description__recipe {
+  flex: 8;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__section__card__dish__description .menu__section__card__dish__description__price {
   flex: 1;
   font-weight: bolder;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu__section__dish .menu__section__dish__description p {
+.menu__section__card__dish__description .menu__section__card__dish__description__price p {
   margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.fa-heart:hover {
+  font-weight: 900;
+  background: linear-gradient(to right, #ff79da 0%, #9356dc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 .menu {
@@ -244,19 +611,120 @@ footer h2 {
   margin: 0;
 }
 
-.menu__section__title h2 {
+.menu__section__card__title h2 {
   font-weight: lighter;
-  font-family: roboto;
+  font-family: roboto, sans-serif, Arial;
   text-transform: uppercase;
   border-bottom: 3px solid #99e2d0;
   width: 40px;
   padding-bottom: 5px;
 }
 
+@media all and (min-width: 768px) {
+  .restaurant__name h1 {
+    font-size: 3rem;
+    padding: 30px;
+  }
+  .fa-regular {
+    font-size: 2rem;
+  }
+  .menu__section__card {
+    height: 200px;
+  }
+  .menu__section__card .menu__section__card__dish_title {
+    display: flex;
+    justify-content: center;
+  }
+  .menu__section__card h3 {
+    font-size: 2rem;
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .menu__section__card p {
+    font-size: 1.7rem;
+    padding: 15px;
+  }
+  .menu__section__card .menu__section__card__dish__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu__section__card__title h2 {
+    text-transform: uppercase;
+    border-bottom: 3px solid #99e2d0;
+    padding-bottom: 5px;
+    margin: auto;
+    width: 100%;
+    font-size: 2rem;
+  }
+  .restaurants__card {
+    width: 110%;
+  }
+  .restaurants__card img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant__name {
+    justify-content: center;
+  }
+  .restaurant__name h1 {
+    font-size: 2rem;
+  }
+  .menu__section__card__title {
+    padding: 15px;
+  }
+  .menu__section__card__title h2 {
+    font-size: 1.2rem;
+  }
+  .menu__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .menu__section__starter {
+    flex-direction: column;
+    width: 30%;
+  }
+  .menu__section__main {
+    width: 30%;
+  }
+  .menu__section__dessert {
+    width: 30%;
+  }
+  .menu__section__card__dish {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .menu__section__card {
+    height: 100px;
+  }
+  .menu__section__card .menu__section__card__dish_title {
+    justify-content: flex-start;
+  }
+  .menu__section__card .menu__section__card__dish__description {
+    display: block;
+  }
+  .menu__section__card.__description__recipe {
+    text-overflow: ellipsis;
+  }
+  .menu__section__card h3 {
+    font-size: 1rem;
+  }
+  .menu__section__card p {
+    font-size: 1rem;
+    padding: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
 .btn__order {
   display: flex;
   justify-content: center;
-  padding: 35px;
+  padding-bottom: 35px;
 }
 
 .btn-pill {
@@ -274,6 +742,27 @@ footer h2 {
   margin: auto;
   text-align: center;
   font-weight: bold;
+}
+
+@media all and (min-width: 768px) {
+  .btn-pill {
+    height: 90px;
+    width: 80%;
+    margin: 15px;
+  }
+  .btn-pill p {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .btn-pill {
+    height: 70px;
+    width: 20%;
+    margin: 15px;
+  }
+  .btn-pill p {
+    font-size: 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

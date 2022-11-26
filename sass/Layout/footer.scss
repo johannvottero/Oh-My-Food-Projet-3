@@ -21,5 +21,65 @@ footer
         color: white;
         padding-top: 35px;
         margin-top: 0;
+        font-weight: 500;
+    }
+
+    .fa-utensils
+    {
+        padding-right: 20px;
+    }
+
+    .fa-handshake-angle
+    {
+        padding-right: 12px;
+    }
+
+}
+
+@media all and (min-width: 768px)
+{
+    footer
+    {
+        font-size: 1.5rem;
+        
+    }
+    li
+    {
+        line-height: 4rem;
+        font-size: 2rem;
+
+    }
+}
+
+@media all and (min-width: 992px)
+{
+    footer
+    {
+        font-size: 1.1rem;
+        padding-left: 50px;
+        
+    }
+
+    ul
+    {
+        padding-left: 50px;
+    }
+
+    li
+    {
+        line-height: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .fa-utensils
+    {
+        font-size: 1.5rem;
+        padding-right: 20px;
+    }
+
+    .fa-handshake-angle
+    {
+        font-size: 1.5rem;
+        padding-right: 10px;
     }
 }

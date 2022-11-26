@@ -1,21 +1,18 @@
-.sub__header
-{   
+.sub__header {
     display: flex;
     justify-content: center;
-    position:relative;
+    position: relative;
 
 }
 
-#logo
-{
+#logo {
     display: flex;
     justify-content: center;
     height: 35px;
     margin: 15px;
 }
 
-.header_arrow
-{
+.header_arrow {
     font-size: 1.7rem;
     color: black;
     position: absolute;
@@ -25,11 +22,45 @@
 }
 
 .sub__header__img {
-    height: 250px;
-    width: 100%;
-        img
-        {
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 250px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+    #logo {
+        height: 60px;
+        margin: 20px;
+
+    }
+
+    .sub__header__img {
+        img {
             width: 100%;
             object-fit: cover;
+            height: 350px;
         }
+        }
+        .header_arrow {
+            font-size: 3rem;
+            left: 25px;
+            top: 25px;
+
+        }
+    
+}
+
+@media screen and (min-width: 992px)
+{
+    #logo {
+        height: 50px;
+        margin: 20px;
+
+    }
+
+    .header_arrow {
+        font-size: 1.3rem;
+    }
 }
