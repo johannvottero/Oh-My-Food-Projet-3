@@ -52,7 +52,7 @@ a {
   }
   75% {
     transform: rotate(180deg);
-    opacity: 0.7;
+    opacity: 0.8;
     visibility: visible;
   }
   100% {
@@ -63,10 +63,6 @@ a {
 }
 @keyframes background {
   0% {
-    opacity: 1;
-    visibility: visible;
-  }
-  75% {
     opacity: 1;
     visibility: visible;
   }
@@ -251,12 +247,6 @@ footer .fa-handshake-angle {
   margin: 0 35px 0 20px;
   font-size: medium;
 }
-.functioning .pink {
-  background-color: #f5edff;
-}
-.functioning .fa-store {
-  color: #8c57c9;
-}
 
 .funct_btn {
   display: flex;
@@ -267,6 +257,18 @@ footer .fa-handshake-angle {
   text-align: center;
   margin-bottom: 25px;
   box-shadow: 4px 4px 2px lightgrey;
+}
+.funct_btn:hover {
+  background-color: #f5edff;
+}
+.funct_btn:hover:hover .fa-mobile-screen-button {
+  color: #8c57c9;
+}
+.funct_btn:hover:hover .fa-list-ul {
+  color: #8c57c9;
+}
+.funct_btn:hover:hover .fa-store {
+  color: #8c57c9;
 }
 .funct_btn .funct_number {
   height: 25px;
@@ -287,7 +289,7 @@ footer .fa-handshake-angle {
 .restaurants__card {
   width: 100%;
   height: 280px;
-  box-shadow: 5px 5px 5px lightgrey;
+  box-shadow: 4px 4px 2px lightgrey;
   border-radius: 25px 25px 25px 25px;
   background-color: white;
   margin-bottom: 20px;
@@ -386,7 +388,7 @@ footer .fa-handshake-angle {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 35px;
-    margin-top: 30px 45px;
+    margin-top: 45px;
   }
   .restaurants {
     display: flex;
@@ -501,7 +503,7 @@ footer .fa-handshake-angle {
 .menu__section__card:hover > .menu__section__card__check {
   width: 15%;
   color: white;
-  transform: all 600ms;
+  transform: 600ms;
 }
 .menu__section__card:hover > .menu__section__card__check > .fa-circle-check {
   animation-delay: 100ms;
@@ -523,13 +525,11 @@ footer .fa-handshake-angle {
 .menu__section__card {
   border-radius: 15px;
   background-color: white;
-  box-shadow: 4px 4px 2px #e6dddd;
   padding-left: 15px;
   margin: 20px 0 15px 0;
   display: flex;
   animation-name: appear;
-  animation-duration: 1000ms;
-  animation-fill-mode: forwards;
+  animation-duration: 900ms;
 }
 .menu__section__card h3 {
   margin: 0;
@@ -575,12 +575,10 @@ footer .fa-handshake-angle {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  padding-top: 10px;
 }
 .menu__section__card__dish__description .menu__section__card__dish__description__price p {
   margin: 0;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .fa-heart:hover {
@@ -630,6 +628,7 @@ footer .fa-handshake-angle {
   }
   .menu__section__card {
     height: 200px;
+    box-shadow: 4px 4px 2px lightgrey;
   }
   .menu__section__card .menu__section__card__dish_title {
     display: flex;

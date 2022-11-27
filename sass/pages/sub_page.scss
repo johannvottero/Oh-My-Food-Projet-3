@@ -21,7 +21,7 @@
 .menu__section__card:hover>.menu__section__card__check {
     width: 15%;
     color: white;
-    transform: all 600ms;
+    transform: 600ms;
 
     &>.fa-circle-check {
         animation-delay: 100ms;
@@ -46,13 +46,11 @@
 .menu__section__card {
     border-radius: 15px;
     background-color: white;
-    box-shadow: 4px 4px 2px #e6dddd;
     padding-left: 15px;
     margin: 20px 0 15px 0;
     display: flex;
     animation-name: appear;
-    animation-duration: 1000ms;
-    animation-fill-mode: forwards;
+    animation-duration: 900ms;
 
     h3 {
         margin: 0;
@@ -101,13 +99,11 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        padding-top: 10px;
     }
 
     .menu__section__card__dish__description__price p {
         margin: 0;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
     }
 }
 
@@ -169,6 +165,7 @@
 
     .menu__section__card {
         height: 200px;
+        @include box-shadow;
 
         .menu__section__card__dish_title {
             display: flex;
