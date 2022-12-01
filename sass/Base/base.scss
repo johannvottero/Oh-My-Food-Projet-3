@@ -57,15 +57,17 @@ a
   border-bottom: 10px solid #9356DC;
   border-right: 10px solid #99e2d0;
   border-radius: 50%;
+  font-family: Shrikhand;
+  font-size: 2rem;
   width: 220px;
   height: 220px;
   animation: spin 3s forwards;
   margin: auto;
   cursor:wait;
-  background-image: url("/images/logo/ohmyfood.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 @media all and (min-width: 768px)
