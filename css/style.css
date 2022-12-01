@@ -28,6 +28,38 @@ a {
   text-decoration: inherit;
 }
 
+.loader__container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #f7f7f7;
+  animation: background 3s forwards;
+  z-index: 1000;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.loader__animation {
+  border: 10px solid white;
+  border-top: 10px solid #9356DC;
+  border-left: 10px solid #99e2d0;
+  border-bottom: 10px solid #9356DC;
+  border-right: 10px solid #99e2d0;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  animation: spin 3s forwards;
+  margin: auto;
+  cursor: wait;
+  background-image: url("/images/logo/ohmyfood.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 @media all and (min-width: 768px) {
   .main_wrapper {
     padding: 0 50px;
@@ -71,38 +103,6 @@ a {
     visibility: hidden;
   }
 }
-.loader__container {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: #f7f7f7;
-  animation: background 3s forwards;
-  z-index: 1000;
-  display: flex;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.loader__animation {
-  border: 10px solid white;
-  border-top: 10px solid #99e2d0;
-  border-left: 10px solid #99e2d0;
-  border-bottom: 10px solid #99e2d0;
-  border-right: 10px solid #99e2d0;
-  border-radius: 50%;
-  width: 220px;
-  height: 220px;
-  animation: spin 3s forwards;
-  margin: auto;
-  cursor: wait;
-  background-image: url("/images/logo/ohmyfood.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
 body {
   font-family: roboto, sans-serif, Arial;
 }
