@@ -10,10 +10,6 @@
   width: 100%;
 }
 
-body {
-  font-family: roboto, sans-serif, Arial;
-}
-
 main {
   background-color: #f7f7f7;
 }
@@ -40,23 +36,23 @@ a {
 @media all and (min-width: 992px) {
   .main_wrapper {
     margin: auto;
-    padding: 0 20px;
     width: 100%;
+    max-width: 1000px;
   }
 }
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
     opacity: 1;
     visibility: visible;
   }
   75% {
-    transform: rotate(180deg);
-    opacity: 0.8;
+    transform: rotate(90deg);
+    opacity: 1;
     visibility: visible;
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
     opacity: 0;
     visibility: hidden;
   }
@@ -107,6 +103,111 @@ a {
   background-position: center;
 }
 
+body {
+  font-family: roboto, sans-serif, Arial;
+}
+
+.restaurants__card {
+  width: 100%;
+  height: 280px;
+  box-shadow: 4px 4px 2px lightgrey;
+  border-radius: 25px 25px 25px 25px;
+  background-color: white;
+  margin-bottom: 20px;
+  position: relative;
+}
+.restaurants__card img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+  border-radius: 25px 25px 0 0;
+}
+.restaurants__card .badge {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-weight: bolder;
+  background-color: #99e2d0;
+  width: 100px;
+  text-align: center;
+  height: 45px;
+  color: #1a8a68;
+}
+.restaurants__card .badge p {
+  margin-top: 12px;
+}
+.restaurants__card .restaurants__card__caption {
+  display: flex;
+}
+.restaurants__card .restaurants__card__caption__icon {
+  flex: 1;
+  font-size: 1.7rem;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 15px;
+}
+.restaurants__card .restaurants__card__caption__description {
+  flex: 5;
+  margin: 10px 0 0 15px;
+}
+.restaurants__card .restaurants__card__caption__description h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.restaurants__card .restaurants__card__caption__description img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+  border-radius: 25px 25px 0 0;
+}
+.restaurants__card .restaurants__card__caption__description p {
+  margin: 0 0 0 0px;
+  padding-top: 5px;
+}
+
+.restaurants__card:hover {
+  transition: transform 250ms ease-out, -webkit-transform 250ms ease-out;
+  transform: scale(1.05);
+  box-shadow: 8px 8px 4px lightgrey;
+}
+
+@media all and (min-width: 768px) {
+  .card {
+    width: 45%;
+  }
+  .restaurants__card {
+    width: 100%;
+  }
+  .restaurants__card img {
+    width: 350px;
+  }
+  .restaurants__card__caption {
+    font-size: 1.5rem;
+  }
+  .restaurants__card h3 {
+    font-size: 3rem;
+  }
+  .restaurants__card .restaurants__card__caption__description h3 {
+    font-size: 1.5rem;
+  }
+  .restaurants__card p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurants__card img {
+    width: 300px;
+  }
+  .restaurants__card__caption {
+    font-size: 1rem;
+  }
+  .restaurants__card .restaurants__card__caption__description h3 {
+    font-size: 1.3rem;
+  }
+  .card {
+    width: 35%;
+  }
+}
 .sub__header {
   display: flex;
   justify-content: center;
@@ -134,9 +235,9 @@ a {
   height: 250px;
 }
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (min-width: 768px) {
   #logo {
-    height: 60px;
+    height: 40px;
     margin: 20px;
   }
   .sub__header__img img {
@@ -145,18 +246,19 @@ a {
     height: 350px;
   }
   .header_arrow {
-    font-size: 3rem;
+    font-size: 2rem;
     left: 25px;
-    top: 25px;
+    top: 20px;
   }
 }
 @media screen and (min-width: 992px) {
   #logo {
-    height: 50px;
+    height: 30px;
     margin: 20px;
   }
   .header_arrow {
     font-size: 1.3rem;
+    top: 25px;
   }
 }
 footer {
@@ -192,8 +294,8 @@ footer .fa-handshake-angle {
     font-size: 1.5rem;
   }
   li {
-    line-height: 4rem;
-    font-size: 2rem;
+    line-height: 2.2rem;
+    font-size: 1.3rem;
   }
 }
 @media all and (min-width: 992px) {
@@ -217,6 +319,10 @@ footer .fa-handshake-angle {
     padding-right: 10px;
   }
 }
+h1 {
+  font-size: 1.5rem;
+}
+
 .location {
   box-shadow: 0px -5px 5px lightgrey;
   display: flex;
@@ -258,6 +364,9 @@ footer .fa-handshake-angle {
   margin-bottom: 25px;
   box-shadow: 4px 4px 2px lightgrey;
 }
+.funct_btn h3 {
+  justify-content: center;
+}
 .funct_btn:hover {
   background-color: #f5edff;
 }
@@ -283,77 +392,23 @@ footer .fa-handshake-angle {
 
 .restaurants {
   background-color: #f7f7f7;
-  padding: 35px;
-}
-
-.restaurants__card {
-  width: 100%;
-  height: 280px;
-  box-shadow: 4px 4px 2px lightgrey;
-  border-radius: 25px 25px 25px 25px;
-  background-color: white;
-  margin-bottom: 20px;
-  position: relative;
-}
-.restaurants__card img {
-  width: 100%;
-  object-fit: cover;
-  height: 200px;
-  border-radius: 25px 25px 0 0;
-}
-.restaurants__card .badge {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-weight: bolder;
-  background-color: #99e2d0;
-  width: 100px;
-  text-align: center;
-  height: 45px;
-  color: #1a8a68;
-}
-.restaurants__card .restaurants__card__caption {
-  display: flex;
-}
-.restaurants__card .restaurants__card__caption__icon {
-  flex: 1;
-  font-size: 1.7rem;
-  text-align: center;
-  padding-top: 10px;
-}
-.restaurants__card .restaurants__card__caption__description {
-  flex: 5;
-  margin: 10px 0 0 15px;
-}
-.restaurants__card .restaurants__card__caption__description h3 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-.restaurants__card .restaurants__card__caption__description img {
-  width: 100%;
-  object-fit: cover;
-  height: 200px;
-  border-radius: 25px 25px 0 0;
-}
-.restaurants__card .restaurants__card__caption__description p {
-  margin: 0 0 0 0px;
-  padding-top: 5px;
 }
 
 @media all and (min-width: 768px) {
   .location p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   .presentation p {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 900;
   }
   .presentation h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .functioning__title {
     margin: auto;
-    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
   }
   .functioning__btn__container {
     display: flex;
@@ -361,12 +416,12 @@ footer .fa-handshake-angle {
     justify-content: space-around;
   }
   .functioning__btn__container h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .funct_btn {
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: 165px;
     width: 30%;
   }
   .funct_btn .funct_number {
@@ -386,9 +441,8 @@ footer .fa-handshake-angle {
   .restaurant__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 35px;
-    margin-top: 45px;
   }
   .restaurants {
     display: flex;
@@ -397,67 +451,48 @@ footer .fa-handshake-angle {
     gap: 50px;
   }
   .restaurants h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: auto;
-  }
-  .restaurants__card {
-    width: 100%;
-  }
-  .restaurants__card img {
-    width: 350px;
-  }
-  .restaurants__card__caption {
-    font-size: 1.5rem;
-  }
-  .restaurants__card h3 {
-    font-size: 3rem;
-  }
-  .restaurants__card .restaurants__card__caption__description h3 {
-    font-size: 1.7rem;
   }
 }
 @media screen and (min-width: 992px) {
-  .card {
-    width: 40%;
-  }
   .location p {
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
   .presentation p {
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: 900;
   }
   .presentation h1 {
-    font-size: 2.5rem;
+    font-size: 1.3rem;
   }
   .functioning__title {
     margin: auto;
-    font-size: 1.5rem;
+    padding-bottom: 30px;
+    font-size: 1rem;
   }
   .functioning__btn__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    gap: 35px;
+    justify-content: center;
+    font-size: 1rem;
   }
   .functioning__btn__container h3 {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
   }
   .funct_btn {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 170px;
-    width: 30%;
+    justify-content: space-around;
+    height: 130px;
+    width: 20%;
   }
   .funct_btn .funct_number {
-    height: 40px;
-    width: 40px;
-    font-size: 1.5rem;
+    height: 30px;
+    width: 30px;
+    font-size: 1.2rem;
     top: -10px;
   }
   .restaurant__container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 35px 35px;
     padding-top: 50px;
     margin: auto;
@@ -468,20 +503,17 @@ footer .fa-handshake-angle {
     flex-direction: column;
   }
   .restaurants h2 {
-    font-size: 2.5rem;
+    font-size: 1.7rem;
     margin: auto;
   }
-  .restaurants__card img {
-    width: 400px;
-  }
-  .restaurants__card__caption {
+  .fa-mobile-screen-button {
     font-size: 1.5rem;
   }
-  .restaurants__card h3 {
-    font-size: 3rem;
+  .fa-list-ul {
+    font-size: 1.5rem;
   }
-  .restaurants__card .restaurants__card__caption__description h3 {
-    font-size: 1.7rem;
+  .fa-store {
+    font-size: 1.5rem;
   }
 }
 @keyframes appear {
@@ -581,7 +613,12 @@ footer .fa-handshake-angle {
   margin: 0;
 }
 
+.fa-heart {
+  font-size: 1.5rem;
+}
+
 .fa-heart:hover {
+  transition: 250ms;
   font-weight: 900;
   background: linear-gradient(to right, #ff79da 0%, #9356dc 100%);
   -webkit-background-clip: text;
@@ -620,14 +657,17 @@ footer .fa-handshake-angle {
 
 @media all and (min-width: 768px) {
   .restaurant__name h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 30px;
   }
   .fa-regular {
     font-size: 2rem;
   }
+  .fa-circle-check {
+    font-size: 3rem;
+  }
   .menu__section__card {
-    height: 200px;
+    height: 140px;
     box-shadow: 4px 4px 2px lightgrey;
   }
   .menu__section__card .menu__section__card__dish_title {
@@ -635,13 +675,12 @@ footer .fa-handshake-angle {
     justify-content: center;
   }
   .menu__section__card h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
     justify-content: center;
     padding-top: 15px;
   }
   .menu__section__card p {
-    font-size: 1.7rem;
-    padding: 15px;
+    font-size: 1.5rem;
   }
   .menu__section__card .menu__section__card__dish__description {
     display: flex;
@@ -657,7 +696,7 @@ footer .fa-handshake-angle {
     font-size: 2rem;
   }
   .restaurants__card {
-    width: 110%;
+    width: 100%;
   }
   .restaurants__card img {
     width: 100%;
@@ -669,6 +708,9 @@ footer .fa-handshake-angle {
     justify-content: center;
   }
   .restaurant__name h1 {
+    font-size: 2rem;
+  }
+  .fa-circle-check {
     font-size: 2rem;
   }
   .menu__section__card__title {
@@ -745,22 +787,22 @@ footer .fa-handshake-angle {
 
 @media all and (min-width: 768px) {
   .btn-pill {
-    height: 90px;
-    width: 80%;
+    height: 80px;
+    width: 50%;
     margin: 15px;
   }
   .btn-pill p {
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (min-width: 992px) {
   .btn-pill {
-    height: 70px;
-    width: 20%;
+    height: 50px;
+    width: 30%;
     margin: 15px;
   }
   .btn-pill p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 

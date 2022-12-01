@@ -30,7 +30,6 @@
     }
 }
 
-
 .menu__section__card__check {
     display: flex;
     font-size: 1.7rem;
@@ -107,14 +106,20 @@
     }
 }
 
+.fa-heart
+{
+    font-size: 1.5rem;
+}
 
 .fa-heart:hover {
+    transition: 250ms;
     font-weight: 900;
     background: linear-gradient(to right, #ff79da 0%, #9356dc 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
 }
+
 
 .menu {
     background-color: $grey;
@@ -154,7 +159,7 @@
 @media all and (min-width: 768px) {
 
     .restaurant__name h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         padding: 30px;
     }
 
@@ -162,9 +167,14 @@
         font-size: 2rem;
     }
 
+    .fa-circle-check
+    {
+        font-size: 3rem;
+    }
+
 
     .menu__section__card {
-        height: 200px;
+        height: 140px;
         @include box-shadow;
 
         .menu__section__card__dish_title {
@@ -173,14 +183,14 @@
         }
 
         h3 {
-            font-size: 2rem;
+            font-size: 1.7rem;
             justify-content: center;
             padding-top: 15px;
         }
 
         p {
-            font-size: 1.7rem;
-            padding: 15px;
+            font-size: 1.5rem;
+
         }
 
         .menu__section__card__dish__description {
@@ -200,14 +210,14 @@
     }
     .restaurants__card 
     {
-        width: 110%;
+        width: 100%;
         img
             {
                 width: 100%;
                 object-fit: cover;
-                
             }
     }
+
     
 }
     @media screen and (min-width: 992px) {
@@ -219,6 +229,11 @@
             font-size: 2rem;
             
         }
+    }
+
+    .fa-circle-check
+    {
+        font-size: 2rem;
     }
 
         .menu__section__card__title
@@ -286,8 +301,4 @@
                 overflow: hidden;
             }
         }
-
-
-
     }
-

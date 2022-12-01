@@ -1,3 +1,9 @@
+
+h1
+{
+    font-size: 1.5rem;
+}
+
 .location 
 {
     box-shadow: 0px -5px 5px lightgrey;
@@ -30,8 +36,7 @@
             color: grey;
             margin:0 35px 0 20px;
             font-size: medium;
-        }
-            
+        }    
 }
 
 
@@ -45,6 +50,10 @@
     text-align: center;
     margin-bottom: 25px;
     @include box-shadow;
+    h3
+    {
+        justify-content: center;
+    }
     &:hover
     {
         background-color: #f5edff; 
@@ -79,92 +88,27 @@
 .restaurants
 {
     background-color: #f7f7f7;
-    padding: 35px;
-    
 }
 
-.restaurants__card
-{
-    width: 100%;
-    height: 280px;
-    @include box-shadow;
-    border-radius: 25px 25px 25px 25px;
-    background-color: white;
-    margin-bottom: 20px;
-    position: relative;
-        img {
-            width: 100%;
-            object-fit: cover;
-            height: 200px;
-            border-radius: 25px 25px 0 0;
-        }
-            .badge
-            {
-                position: absolute;
-                right: 20px;
-                top: 15px;
-                font-weight: bolder;
-                background-color:#99e2d0;
-                width: 100px;
-                text-align: center;
-                height: 45px;
-                color:#1a8a68;
-            }
-
-            .restaurants__card__caption 
-            {
-                display: flex;
-            }
-            .restaurants__card__caption__icon 
-            {
-                flex: 1;
-                font-size: 1.7rem;
-                text-align: center;
-                padding-top: 10px;
-            }
-            .restaurants__card__caption__description
-            {
-                flex:5;
-                margin: 10px 0 0 15px;
-                    h3
-                    {
-                        font-size: 1.2rem;
-                        margin: 0;
-                        
-                    }
-                    img 
-                    {
-                        width: 100%;
-                        object-fit: cover;
-                        height: 200px;
-                        border-radius: 25px 25px 0 0;
-                    }
-                    p
-                    {
-                       margin: 0 0 0 0px; 
-                       padding-top: 5px;
-                    }
-            }
-}
 
 @media all and (min-width: 768px) {
 
 .location
 {
     p{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 }
 
 .presentation
 {
     p{
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 900;
     }
     h1
     {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 }
 
@@ -173,7 +117,8 @@
     &__title
     {   
         margin: auto;
-        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
     }
 }
 .functioning__btn__container
@@ -183,7 +128,7 @@
     justify-content: space-around;
     h3
     {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -191,7 +136,7 @@
 {
     flex-direction: column;
     justify-content: space-between;
-    height: 200px;
+    height: 165px;
     width: 30%;
 
 
@@ -219,9 +164,8 @@
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     gap: 35px;
-    margin-top: 45px;
 }
 
 .restaurants
@@ -230,55 +174,34 @@
     flex-wrap: wrap;
     flex-direction: row;
     gap: 50px;
-    h2{
-        font-size: 2.5rem;
+    h2
+    {
+        font-size: 2rem;
         margin: auto;
     }
 }
 
-.restaurants__card
-{
-    width: 100%;
-    img {
-        width:350px;
-    }
-    &__caption
-    {
-        font-size: 1.5rem;
-    }
-    h3{
-        font-size: 3rem;
-    }
-    .restaurants__card__caption__description h3
-    {
-        font-size: 1.7rem;
-    }
-}
 
 }
 
 @media screen and (min-width: 992px)
 {
-    .card
-    {
-        width: 40%;
-    }
 
 .location
 {
     p{
-        font-size: 1.7rem;
+        font-size: 1rem;
     }
 }
 .presentation
 {
     p{
-    font-size: 2rem;
+    font-size: 1.1rem;
     font-weight: 900;
     }
     h1
     {
-        font-size: 2.5rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -287,41 +210,41 @@
     &__title
     {   
         margin: auto;
-        font-size: 1.5rem;
+        padding-bottom: 30px;
+        font-size: 1rem;
     }
 }
 .functioning__btn__container
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    gap: 35px;
+    justify-content: center;
+    font-size: 1rem;
     h3
     {
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
 }
 
 .funct_btn
 {
-    flex-direction: column;
-    justify-content: space-between;
-    height: 170px;
-    width: 30%;
+    justify-content: space-around;
+    height: 130px;
+    width: 20%;
 
     .funct_number
 {
-    height: 40px;
-    width: 40px;
-    font-size: 1.5rem;
+    height: 30px;
+    width: 30px;
+    font-size: 1.2rem;
     top: -10px;
 }
 }
+
 
 .restaurant__container
 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     gap: 35px 35px;
     padding-top: 50px;
     margin: auto;
@@ -333,28 +256,24 @@
     flex-wrap: wrap;
     flex-direction: column;
     h2{
-        font-size: 2.5rem;
+        font-size: 1.7rem;
         margin: auto;
     }
 }
 
-.restaurants__card
+.fa-mobile-screen-button
 {
-    img {
-        width:400px;
-    }
-    &__caption
-    {
-        font-size: 1.5rem;
-    }
-    h3{
-        font-size: 3rem;
-    }
-    .restaurants__card__caption__description h3
-    {
-        font-size: 1.7rem;
-    }
+    font-size: 1.5rem;
 }
 
+.fa-list-ul
+{
+    font-size: 1.5rem;
+}
+
+.fa-store
+{
+    font-size: 1.5rem;
+}
 
 }

@@ -11,10 +11,6 @@
   width: 100%;
 }
 
-body
-{
-  font-family: roboto, sans-serif, Arial;
-}
 
 main
 {
@@ -49,28 +45,29 @@ a
 .main_wrapper
 {
   margin: auto;
-  padding: 0 20px;
   width: 100%;
+  max-width: 1000px;
 }
+
 }
 
 
 @keyframes spin {
   0%{
-    transform: rotate(0deg);
+    transform: rotate(360deg);
     opacity: 1;
     visibility: visible;
     
   }
   
   75%{
-    transform: rotate(180deg);
-    opacity: 0.8;
+    transform: rotate(90deg);
+    opacity: 1;
     visibility: visible;
   }
 
   100%{
-    transform: rotate(360deg);
+    transform: rotate(0deg);
     opacity: 0;
     visibility: hidden;
   }

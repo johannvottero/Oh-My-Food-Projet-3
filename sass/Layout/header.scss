@@ -29,9 +29,9 @@
     }
 }
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (min-width: 768px) {
     #logo {
-        height: 60px;
+        height: 40px;
         margin: 20px;
 
     }
@@ -44,9 +44,9 @@
         }
         }
         .header_arrow {
-            font-size: 3rem;
+            font-size: 2rem;
             left: 25px;
-            top: 25px;
+            top: 20px;
 
         }
     
@@ -55,12 +55,13 @@
 @media screen and (min-width: 992px)
 {
     #logo {
-        height: 50px;
+        height: 30px;
         margin: 20px;
 
     }
 
     .header_arrow {
         font-size: 1.3rem;
+        top:25px
     }
 }
