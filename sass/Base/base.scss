@@ -7,7 +7,7 @@
 .main_wrapper
 {
   margin: auto;
-  padding: 0 20px;
+  padding: 15px 20px;
   width: 100%;
 }
 
@@ -19,7 +19,7 @@ main
 
 .main_container
 {
-    background-color: $grey;
+    background-color: #eaeaea;
     border-radius:25px 25px 0 0;
     position: relative;
     top:-40px;
@@ -32,22 +32,6 @@ a
   color: inherit; 
   text-decoration: inherit; 
 }
-
-.loader__container
-{
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background-color: $grey;
-  animation: background 3s forwards;
-  z-index: 1000;
-  display: flex;  
-  top:0;
-  left: 0; 
-  right: 0;
-  bottom: 0;
-}
-
 
 .loader__animation
 {
@@ -67,8 +51,24 @@ a
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
+
+.loader__container
+{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: $grey;
+  animation: background 3s forwards;
+  z-index: 1000;
+  display: flex;  
+  top:0;
+  left: 0; 
+  right: 0;
+  bottom: 0;
+}
+
+
 
 @media all and (min-width: 768px)
 {
