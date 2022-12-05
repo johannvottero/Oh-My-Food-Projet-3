@@ -538,9 +538,8 @@ h1 {
 }
 
 .menu__section__card:hover > .menu__section__card__check {
-  width: 15%;
+  width: 25%;
   color: white;
-  transform: 600ms;
 }
 .menu__section__card:hover > .menu__section__card__check > .fa-circle-check {
   animation-delay: 100ms;
@@ -781,13 +780,16 @@ h1 {
   width: 70%;
   height: 50px;
   color: white;
-  box-shadow: 4px 4px 2px #f7f7f7;
 }
 .btn-pill p {
   font-size: 1.1rem;
   margin: auto;
   text-align: center;
   font-weight: bold;
+}
+.btn-pill:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 4px lightgrey;
 }
 
 @media all and (min-width: 768px) {
@@ -799,6 +801,10 @@ h1 {
   .btn-pill p {
     font-size: 1.4rem;
   }
+  .btn-pill:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 4px lightgrey;
+  }
 }
 @media screen and (min-width: 992px) {
   .btn-pill {
@@ -808,6 +814,10 @@ h1 {
   }
   .btn-pill p {
     font-size: 1.1rem;
+  }
+  .btn-pill:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 4px lightgrey;
   }
 }
 
